@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject TutorialPage;
+    public GameObject GameModeMenu;
     
     public void Play()
     {
-        SceneManager.LoadScene("Endless");
+        gameObject.SetActive(false);
+        GameModeMenu.SetActive(true);
     }
 
     public void Tutorial()

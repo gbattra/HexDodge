@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 73fcccdfb0b8f0c40aa16e11dcdb32e5
   - enabled: 1
+    path: Assets/Scenes/Burst.unity
+    guid: 9dcc50c9cddc8e6499286a50079c24b3
+  - enabled: 1
+    path: Assets/Scenes/Sprint.unity
+    guid: 08b50e52605ff2146a74393e52a86155
+  - enabled: 1
+    path: Assets/Scenes/LongDistance.unity
+    guid: d0b6d0c4b255c9c408806f5c0a78d0e1
+  - enabled: 1
+    path: Assets/Scenes/Marathon.unity
+    guid: ab56c8c8867931e4abf5d95943f35d56
+  - enabled: 1
     path: Assets/Scenes/Endless.unity
     guid: c3acab74464d4e04599be326ab41e067
   m_configObjects: {}
