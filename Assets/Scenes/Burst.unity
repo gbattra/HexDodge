@@ -259,7 +259,7 @@ PrefabInstance:
     - target: {fileID: 5122862667609188922, guid: 610264fcf8670c840b0b3fae26886ce0,
         type: 3}
       propertyPath: TotalTime
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5122862667609188923, guid: 610264fcf8670c840b0b3fae26886ce0,
         type: 3}
