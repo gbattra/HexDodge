@@ -10,7 +10,7 @@ public class Level : MonoBehaviour
 {
     public bool IsTimed;
     public float TotalTime;
-    private float TimeRemaining => TotalTime * 60f - Timer.Elapsed.Seconds;
+    private double TimeRemaining => TotalTime - Timer.Elapsed.TotalSeconds;
     
     public GameObject MapPrefab;
     public GameObject PlayerPrefab;
@@ -37,7 +37,9 @@ public class Level : MonoBehaviour
     
     private string DirectionMoved;
 
-    public bool GameOver => _player != null && !_player.GetComponent<Player>().Alive;
+    public bool GameOver =>
+        IsTimed && TimeRemaining <= 0 ||
+        _player != null && !_player.GetComponent<Player>().Alive;
 
     public void Awake()
     {
@@ -55,12 +57,15 @@ public class Level : MonoBehaviour
             Quaternion.identity);
         _camera.transform.parent = transform;
         _camera.GetComponent<FollowCamera>().Follow = _player;
+    }
+
+    public void Start()
+    {
         _timer.Start();
     }
 
     public void FixedUpdate()     
     {
-        Debug.Log(TimeRemaining);
         _levelCanvas.GetComponent<LevelCanvas>().SetTime(Timer.Elapsed);
     }
 

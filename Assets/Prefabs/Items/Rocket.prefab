@@ -58,7 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 279227755de105943a10bf3cfad1510f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyEffect: {fileID: 0}
+  DestroyEffect: {fileID: 3139256316687621037, guid: d3adaadbb03b1874ca638851c6f3a487,
+    type: 3}
   DestroySoundName: RocketCollect
   ShouldPlayDestroyEffect: 0
   ShouldPlaySoundEffect: 0
@@ -129,7 +130,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.08
       objectReference: {fileID: 0}
-    - target: {fileID: 2300008, guid: 8502ce6eb778c514685c4f5ce397fa72, type: 3}
+    - target: {fileID: 2300000, guid: 8502ce6eb778c514685c4f5ce397fa72, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e0dbc08d46ed194e9ff8a6787df3083, type: 2}
@@ -137,7 +138,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e0dbc08d46ed194e9ff8a6787df3083, type: 2}
-    - target: {fileID: 2300000, guid: 8502ce6eb778c514685c4f5ce397fa72, type: 3}
+    - target: {fileID: 2300004, guid: 8502ce6eb778c514685c4f5ce397fa72, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e0dbc08d46ed194e9ff8a6787df3083, type: 2}
@@ -145,7 +146,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e0dbc08d46ed194e9ff8a6787df3083, type: 2}
-    - target: {fileID: 2300004, guid: 8502ce6eb778c514685c4f5ce397fa72, type: 3}
+    - target: {fileID: 2300008, guid: 8502ce6eb778c514685c4f5ce397fa72, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e0dbc08d46ed194e9ff8a6787df3083, type: 2}
