@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &481992808395479878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481992808395479879}
+  - component: {fileID: 481992808395479876}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481992808395479879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481992808395479878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481992808395479876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481992808395479878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4674cb6726f3848b52a00ab92fb124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HexCard: {fileID: 4025798777645250378, guid: 397f6c9863c719d4b97f9ae53bda00a1, type: 3}
+  Boost: {fileID: 5241894766543233881, guid: c83f772f4f4f079479e251e69267714e, type: 3}
+  Rocket: {fileID: 6557333805159589964, guid: 22c9d507587b57443a1824d6bd6a0454, type: 3}
+  Health: {fileID: 5229964156418747541, guid: ad209e219eb6a30429ad082ee8bade2b, type: 3}
+  Mine: {fileID: 1769418553582179372, guid: 2572c6604c926904fafd52164bbe7f7e, type: 3}
+  Shield: {fileID: 1940024016502255129, guid: 0cb4cdd850334dd42a4e1260a19c9f2c, type: 3}
+  Empty: {fileID: 2524900671435868503, guid: 8ccc14d70e908bf40ace8f26c233a200, type: 3}
+  Tiles: []
+  HealthPercent: 3
+  BoostPercent: 5
+  RocketPercent: 5
+  MinePercent: 30
+  ShieldPercent: 30
+  MapWidth: 11
+  MapHeight: 8
