@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
         var item = tile.GetComponent<Tile>().Item;
         if (item.CompareTag("Boost"))
         {
-            item.GetComponent<Item>().ShouldPlayDestroyEffect = RocketCount < StartingBoostCount;
+            item.GetComponent<Item>().ShouldPlayDestroyEffect = BoostCount < StartingBoostCount;
             item.GetComponent<Item>().ShouldPlaySoundEffect = BoostCount < StartingBoostCount;
             BoostCount += 1;
             Destroy(item);
