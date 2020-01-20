@@ -71,7 +71,8 @@ public class LevelCanvas : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Endless");
+        var scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
     public void Exit()
