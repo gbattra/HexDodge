@@ -46,8 +46,12 @@ public class Gameplay : MonoBehaviour
             i -= 1;
             yield return new WaitForSeconds(1);
         } while ( i > 0 );
-        Level.LevelCanvas.Countdown.SetText($"GO!");
-        CountdownFinished = true;
+
+        if (!CountdownFinished)
+            CountdownFinished = true;
+            Level.LevelCanvas.Countdown.SetText($"GO!");
+            yield return new WaitForSeconds(1);
+            
         Level.StartTimer();
         Destroy(Level.LevelCanvas.CountdownGameObject);
         yield return null;
