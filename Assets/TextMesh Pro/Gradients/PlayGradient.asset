@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayGradient
   m_EditorClassIdentifier: 
   colorMode: 3
-  topLeft: {r: 0.92156863, g: 1, b: 0, a: 1}
-  topRight: {r: 0.92156863, g: 1, b: 0, a: 1}
-  bottomLeft: {r: 1, g: 0.6060061, b: 0, a: 1}
-  bottomRight: {r: 1, g: 0.60784316, b: 0, a: 1}
+  topLeft: {r: 0, g: 1, b: 0.041554213, a: 1}
+  topRight: {r: 0.18841672, g: 1, b: 0, a: 1}
+  bottomLeft: {r: 0, g: 1, b: 0.9895632, a: 1}
+  bottomRight: {r: 0, g: 0.9690399, b: 1, a: 1}
