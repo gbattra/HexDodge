@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using System.Timers;
 using UnityEngine;
 
@@ -8,14 +9,16 @@ using UnityEngine;
 [RequireComponent(typeof(Gameplay))]
 public class Gameplay : MonoBehaviour
 {
+    public bool CountdownFinished;
     public bool IsTimed;
     public float TotalTime;
 
     public Controller Controller;
-    public GameObject Level;
+    
+    [SerializeField]
+    public Level Level;
     
     private Controller _controller;
-    private GameObject _level;
 
     public GameObject AudioManagerPrefab;
     public GameObject AudioManager => _audioManager;
@@ -24,25 +27,43 @@ public class Gameplay : MonoBehaviour
     public void Awake()
     {
         _controller = Controller;
-        _level = Instantiate(Level, transform, true);
-        _level.GetComponent<Level>().IsTimed = IsTimed;
-        _level.GetComponent<Level>().TotalTime = TotalTime;
+        Level.IsTimed = IsTimed;
+        Level.TotalTime = TotalTime;
         _audioManager = Instantiate(AudioManagerPrefab, transform, true);
+    }
+
+    public void Start()
+    {
+        StartCoroutine(Countdown());
+    }
+
+    public IEnumerator Countdown()
+    {
+        var i = 3;
+        do
+        {
+            Level.LevelCanvas.Countdown.SetText($"{i}");
+            i -= 1;
+            yield return new WaitForSeconds(1);
+        } while ( i > 0 );
+        Level.LevelCanvas.Countdown.SetText($"GO!");
+        CountdownFinished = true;
+        Level.StartTimer();
+        Destroy(Level.LevelCanvas.CountdownGameObject);
+        yield return null;
     }
 
     public void Update()
     {
-        var level = _level.GetComponent<Level>();
-        var canvas = level.LevelCanvas.GetComponent<LevelCanvas>();
-        if (level.GameOver && !canvas.GameOverSprite.active)
+        if (Level.GameOver && !Level.LevelCanvas.GameOverSprite.active)
         {
             FindObjectOfType<AudioManager>().Play("GameOver");
-            level.Timer.Stop();
-            canvas.GameOverSprite.SetActive(true);
-            canvas.RestartButton.SetActive(true);
-            Destroy(level.Player);
+            Level.Timer.Stop();
+            Level.LevelCanvas.GameOverSprite.SetActive(true);
+            Level.LevelCanvas.RestartButton.SetActive(true);
+            Destroy(Level.Player);
         }
-        else if (!level.GameOver)
+        else if (!Level.GameOver && CountdownFinished)
         {
             HandleController();
         }
@@ -57,10 +78,10 @@ public class Gameplay : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Tile") && hit.collider.GetComponent<Tile>().IsAvailable)
                 {
-                    _level.GetComponent<Level>().Player.transform.LookAt(hit.transform);
-                    _level.GetComponent<Level>().SetSelected(hit.collider.gameObject);
-                    _level.GetComponent<Level>().HandleTileImpact();
-                    _level.GetComponent<Level>().MoveToTile();
+                    Level.Player.transform.LookAt(hit.transform);
+                    Level.SetSelected(hit.collider.gameObject);
+                    Level.HandleTileImpact();
+                    Level.MoveToTile();
                 }
             }
         }

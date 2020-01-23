@@ -49,6 +49,7 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="Controller.cs" t="Include" />
           <e p="Coordinate.cs" t="Include" />
+          <e p="Countdown.cs" t="Include" />
           <e p="FollowCamera.cs" t="Include" />
           <e p="GameModeMenu.cs" t="Include" />
           <e p="Gameplay.cs" t="Include" />

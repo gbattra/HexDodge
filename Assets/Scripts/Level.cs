@@ -15,7 +15,6 @@ public class Level : MonoBehaviour
     public GameObject MapPrefab;
     public GameObject PlayerPrefab;
     public GameObject CameraPrefab;
-    public GameObject LevelCanvasPrefab;
 
     private GameObject Map => _map;
     private GameObject _map;
@@ -26,8 +25,8 @@ public class Level : MonoBehaviour
     private GameObject Camera => _camera;
     private GameObject _camera;
 
-    public GameObject LevelCanvas => _levelCanvas;
-    private GameObject _levelCanvas;
+    [SerializeField]
+    public LevelCanvas LevelCanvas;
     
     public int TileCount => _tileCount;
     private int _tileCount;
@@ -43,7 +42,6 @@ public class Level : MonoBehaviour
 
     public void Awake()
     {
-        _levelCanvas = Instantiate(LevelCanvasPrefab);
         _map = Instantiate(MapPrefab, transform, true);
         _map.transform.parent = transform;
         _player = Instantiate(
@@ -59,14 +57,14 @@ public class Level : MonoBehaviour
         _camera.GetComponent<FollowCamera>().Follow = _player;
     }
 
-    public void Start()
+    public void StartTimer()
     {
         _timer.Start();
     }
 
     public void FixedUpdate()     
     {
-        _levelCanvas.GetComponent<LevelCanvas>().SetTime(Timer.Elapsed);
+        LevelCanvas.SetTime(Timer.Elapsed);
     }
 
     public void SetSelected(GameObject toTile)
@@ -97,12 +95,12 @@ public class Level : MonoBehaviour
         if (!player.CanHandleTile(selectedTile))
             StartCoroutine(_camera.GetComponent<FollowCamera>().Shake());
         player.HandleItemImpact(selectedTile);
-        _levelCanvas.GetComponent<LevelCanvas>().HandleItemImpact(player);
+        LevelCanvas.HandleItemImpact(player);
     }
 
     private void IncrementTileCount()
     {
         _tileCount += 1;
-        _levelCanvas.GetComponent<LevelCanvas>().SetTileCount(_tileCount);
+        LevelCanvas.SetTileCount(_tileCount);
     }
 }

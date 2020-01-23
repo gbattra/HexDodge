@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d21dc6d-3603-4d32-8abf-8bba37033f35" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HexDodge/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HexDodge/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HexDodge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HexDodge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Burst.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Burst.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Gameplay.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Gameplay.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PostFX/PostFX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PostFX/PostFX.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AnchorCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coordinate.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameModeMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/UI/LevelCanvas.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/PostFX/PostFX.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/UI/Boost.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Effects/BoostEffect.prefab" root0="FORCE_HIGHLIGHTING" />
@@ -46,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Menu.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Countdown.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -72,14 +81,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rotator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameModeMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Countdown.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay.cs" />
       </list>
     </option>
   </component>
@@ -154,7 +164,8 @@
       <workItem from="1579390527522" duration="295000" />
       <workItem from="1579398209159" duration="134000" />
       <workItem from="1579398401438" duration="1714000" />
-      <workItem from="1579450195825" duration="3928000" />
+      <workItem from="1579450195825" duration="4245000" />
+      <workItem from="1579735871822" duration="2932000" />
     </task>
     <servers />
   </component>
@@ -185,14 +196,14 @@
       <screen x="1920" y="-387" width="1080" height="1880" />
     </state>
     <state x="1961" y="196" key="SettingsEditor/1920.-387.1080.1880/0.0.1920.1040@1920.-387.1080.1880" timestamp="1579398522365" />
-    <state x="2139" y="127" width="642" height="852" key="find.popup" timestamp="1579490516497">
+    <state x="2139" y="127" width="642" height="852" key="find.popup" timestamp="1579737743193">
       <screen x="1920" y="-387" width="1080" height="1880" />
     </state>
-    <state x="2139" y="127" width="642" height="852" key="find.popup/1920.-387.1080.1880/0.0.1920.1040@1920.-387.1080.1880" timestamp="1579490516497" />
-    <state x="2123" y="48" width="672" height="678" key="search.everywhere.popup" timestamp="1579490429272">
+    <state x="2139" y="127" width="642" height="852" key="find.popup/1920.-387.1080.1880/0.0.1920.1040@1920.-387.1080.1880" timestamp="1579737743193" />
+    <state x="2123" y="48" width="672" height="678" key="search.everywhere.popup" timestamp="1579490657702">
       <screen x="1920" y="-387" width="1080" height="1880" />
     </state>
-    <state x="2123" y="48" width="672" height="678" key="search.everywhere.popup/1920.-387.1080.1880/0.0.1920.1040@1920.-387.1080.1880" timestamp="1579490429272" />
+    <state x="2123" y="48" width="672" height="678" key="search.everywhere.popup/1920.-387.1080.1880/0.0.1920.1040@1920.-387.1080.1880" timestamp="1579490657702" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

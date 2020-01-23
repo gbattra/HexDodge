@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class LevelCanvas : MonoBehaviour
 {
+    [SerializeField]
+    public Countdown Countdown;
+    public GameObject CountdownGameObject;
+    
     public GameObject BoostBar;
     public GameObject RocketBar;
     public GameObject HealthBar;
