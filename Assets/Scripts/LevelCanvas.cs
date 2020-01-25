@@ -103,7 +103,7 @@ public class LevelCanvas : MonoBehaviour
 
         if (!IsRed && color == Color.red)
         {
-            StartCoroutine(FinalCountdown());
+            StartCoroutine("FinalCountdown");
             _timer.GetComponent<Tracker>().SetColor(color);
             IsRed = true;
         }
@@ -111,7 +111,7 @@ public class LevelCanvas : MonoBehaviour
 
     public void StopCountdown()
     {
-        StopCoroutine(FinalCountdown());
+        StopCoroutine("FinalCountdown");
     }
 
     private IEnumerator FinalCountdown()
