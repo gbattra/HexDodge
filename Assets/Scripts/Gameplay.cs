@@ -45,14 +45,14 @@ public class Gameplay : MonoBehaviour
             Level.LevelCanvas.Countdown.SetText($"{i}");
             FindObjectOfType<AudioManager>().Play("Beep");
             i -= 1;
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(1);
         } while ( i > 0 );
 
         if (!CountdownFinished)
             CountdownFinished = true;
         FindObjectOfType<AudioManager>().Play("Go");
-        Level.LevelCanvas.Countdown.SetText($"GO!");
-            yield return new WaitForSeconds(1);
+        Level.LevelCanvas.Countdown.SetText("GO!");
+        yield return new WaitForSeconds(1);
             
         Level.StartTimer();
         Destroy(Level.LevelCanvas.CountdownGameObject);

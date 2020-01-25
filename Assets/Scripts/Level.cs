@@ -65,6 +65,7 @@ public class Level : MonoBehaviour
     public void HandleGameOver()
     {
         Timer.Stop();
+        LevelCanvas.StopCountdown();
         LevelCanvas.GameOverSprite.SetActive(true);
         LevelCanvas.RestartButton.SetActive(true);
         if (_tileCount > _highScore)
@@ -77,9 +78,22 @@ public class Level : MonoBehaviour
         _timer.Start();
     }
 
-    public void FixedUpdate()     
+    public void FixedUpdate()
     {
-        LevelCanvas.SetTime(Timer.Elapsed);
+        if (!IsTimed)
+            LevelCanvas.SetTime(Timer.Elapsed.ToString(@"m\:ss"));
+        else
+        {
+            var min = Math.Floor(TimeRemaining / 60);
+            var sec = Math.Floor(TimeRemaining % 60);
+            LevelCanvas.SetTime($"{min}:{sec}");
+
+            if (min == 0 && sec <= 20 && sec > 10)
+                LevelCanvas.SetTimerColor(Color.yellow);
+            if (min == 0 && sec <= 10)
+                LevelCanvas.SetTimerColor(Color.red);
+        }
+
     }
 
     public void SetSelected(GameObject toTile)

@@ -56,6 +56,9 @@ public class LevelCanvas : MonoBehaviour
     public float RocketBarOffsetX;
     public float HealthBarOffsetY;
 
+    private bool IsYellow;
+    private bool IsRed;
+
     private GameObject _boostBar;
     private GameObject _rocketBar;
     private GameObject _healthBar;
@@ -87,6 +90,40 @@ public class LevelCanvas : MonoBehaviour
         _restartButton.transform.position += RestartButtonPosition;
         _restartButton.GetComponent<Button>().onClick.AddListener(Restart);
         _restartButton.SetActive(false);
+    }
+
+    public void SetTimerColor(Color color)
+    {
+        if (!IsYellow && color == Color.yellow)
+        {
+            FindObjectOfType<AudioManager>().Play("Alarm");
+            _timer.GetComponent<Tracker>().SetColor(color);
+            IsYellow = true;
+        }
+
+        if (!IsRed && color == Color.red)
+        {
+            StartCoroutine(FinalCountdown());
+            _timer.GetComponent<Tracker>().SetColor(color);
+            IsRed = true;
+        }
+    }
+
+    public void StopCountdown()
+    {
+        StopCoroutine(FinalCountdown());
+    }
+
+    private IEnumerator FinalCountdown()
+    {
+        var i = 10;
+        do
+        {
+            FindObjectOfType<AudioManager>().Play("Alarm");
+            yield return new WaitForSeconds(1f);
+            i -= 1;
+        } while (i > 0);
+        yield return null;
     }
 
     public void AnnounceHighScore(string key, int score)
@@ -125,11 +162,11 @@ public class LevelCanvas : MonoBehaviour
         _counter.GetComponent<Tracker>().SetLabelAndValue("TILES", count.ToString());
     }
 
-    public void SetTime(TimeSpan elapsed)
+    public void SetTime(string value)
     {
         _timer.GetComponent<Tracker>().SetLabelAndValue(
             "TIMER",
-            elapsed.ToString(@"m\:ss"));
+            value);
     }
 
     public void HandleItemImpact(Player player)

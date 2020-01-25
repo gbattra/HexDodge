@@ -37,4 +37,9 @@ public class Tracker : MonoBehaviour
         _label.GetComponent<Text>().text = label;
         _value.GetComponent<Text>().text = value;
     }
+
+    public void SetColor(Color color)
+    {
+        _value.GetComponent<Text>().color = color;
+    }
 }
