@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -30,11 +31,12 @@ public class LevelCanvas : MonoBehaviour
     public GameObject HealthBar;
     public GameObject TrackerPrefab;
     public GameObject RestartButtonPrefab;
-
+    
     public GameObject NewHighScoreText;
-
     public GameObject MuteButton;
     public GameObject UnmuteButton;
+
+    public TextMeshProUGUI TimeRemainingText;
     
     public Vector3 TimerPosition;
     public Vector3 CounterPosition;
@@ -96,6 +98,7 @@ public class LevelCanvas : MonoBehaviour
     {
         if (!IsYellow && color == Color.yellow)
         {
+            StartCoroutine(AnnounceTimeRemaining(20));
             FindObjectOfType<AudioManager>().Play("Alarm");
             _timer.GetComponent<Tracker>().SetColor(color);
             IsYellow = true;
@@ -103,10 +106,20 @@ public class LevelCanvas : MonoBehaviour
 
         if (!IsRed && color == Color.red)
         {
+            StartCoroutine(AnnounceTimeRemaining(10));
             StartCoroutine("FinalCountdown");
             _timer.GetComponent<Tracker>().SetColor(color);
             IsRed = true;
         }
+    }
+
+    public IEnumerator AnnounceTimeRemaining(int seconds)
+    {
+        TimeRemainingText.text = $"{seconds} SECONDS REMAINING!";
+        TimeRemainingText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
+        TimeRemainingText.gameObject.SetActive(false);
+        TimeRemainingText.text = "";
     }
 
     public void StopCountdown()
