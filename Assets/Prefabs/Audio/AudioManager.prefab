@@ -99,8 +99,19 @@ MonoBehaviour:
     Name: GameOver
     Volume: 0.1
     Pitch: 1
+  - Clip: {fileID: 8300000, guid: a3578a2f4fc8d954c8621f237e87e9e2, type: 3}
+    Source: {fileID: 0}
+    Name: Beep
+    Volume: 0.1
+    Pitch: 1
+  - Clip: {fileID: 8300000, guid: 75b84dc0924413a408b882acec78ff15, type: 3}
+    Source: {fileID: 0}
+    Name: Go
+    Volume: 0.1
+    Pitch: 1
   - Clip: {fileID: 8300000, guid: de978c17062b8734b9484cdc978298c6, type: 3}
     Source: {fileID: 0}
     Name: NewRecord
     Volume: 0.1
     Pitch: 1
+  IsMuted: 0
