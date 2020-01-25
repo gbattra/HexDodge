@@ -40,7 +40,7 @@ public class Level : MonoBehaviour
     private string DirectionMoved;
 
     public bool GameOver =>
-        IsTimed && TimeRemaining <= 0 ||
+        IsTimed && TimeRemaining < 1 ||
         _player != null && !_player.GetComponent<Player>().Alive;
 
     public void Awake()
@@ -93,7 +93,12 @@ public class Level : MonoBehaviour
         {
             var min = Math.Floor(TimeRemaining / 60);
             var sec = Math.Floor(TimeRemaining % 60);
-            LevelCanvas.SetTime($"{min}:{(sec < 10 ? "0" + sec : sec.ToString())}");
+            if (min + sec > 0)
+                LevelCanvas.SetTime($"{min}:{(sec < 10 ? "0" + sec : sec.ToString())}");
+            else
+            {
+                LevelCanvas.SetTime("0:00");
+            }
 
             if (min == 0 && sec <= 20 && sec > 10)
                 LevelCanvas.SetTimerColor(Color.yellow);
