@@ -64,9 +64,7 @@ public class Gameplay : MonoBehaviour
         if (Level.GameOver && !Level.LevelCanvas.GameOverSprite.active)
         {
             FindObjectOfType<AudioManager>().Play("GameOver");
-            Level.Timer.Stop();
-            Level.LevelCanvas.GameOverSprite.SetActive(true);
-            Level.LevelCanvas.RestartButton.SetActive(true);
+            Level.HandleGameOver();
             Destroy(Level.Player);
         }
         else if (!Level.GameOver && CountdownFinished)

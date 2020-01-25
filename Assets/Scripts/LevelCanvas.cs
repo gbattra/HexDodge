@@ -10,12 +10,28 @@ public class LevelCanvas : MonoBehaviour
     [SerializeField]
     public Countdown Countdown;
     public GameObject CountdownGameObject;
+
+    public bool HasNewHighScore
+    {
+        get => _hasNewHighScore;
+        set
+        {
+            if (value)
+                _counter.GetComponent<Tracker>().Value.GetComponent<Text>().color = Color.cyan;
+
+            _hasNewHighScore = value;
+        }
+    }
+    
+    private bool _hasNewHighScore;
     
     public GameObject BoostBar;
     public GameObject RocketBar;
     public GameObject HealthBar;
     public GameObject TrackerPrefab;
     public GameObject RestartButtonPrefab;
+
+    public GameObject NewHighScoreText;
 
     public GameObject MuteButton;
     public GameObject UnmuteButton;
@@ -71,6 +87,12 @@ public class LevelCanvas : MonoBehaviour
         _restartButton.transform.position += RestartButtonPosition;
         _restartButton.GetComponent<Button>().onClick.AddListener(Restart);
         _restartButton.SetActive(false);
+    }
+
+    public void AnnounceHighScore(string key, int score)
+    {
+        NewHighScoreText?.SetActive(true);
+        PlayerPrefs.SetInt(key, score);
     }
 
     public void Restart()

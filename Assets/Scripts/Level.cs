@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Timers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 
 public class Level : MonoBehaviour
@@ -33,6 +34,8 @@ public class Level : MonoBehaviour
     
     public Stopwatch Timer => _timer;
     private Stopwatch _timer = new Stopwatch();
+
+    private int _highScore;
     
     private string DirectionMoved;
 
@@ -42,6 +45,8 @@ public class Level : MonoBehaviour
 
     public void Awake()
     {
+        _highScore = PlayerPrefs.GetInt(
+            $"{SceneManager.GetActiveScene().name}_highScore", 0);
         _map = Instantiate(MapPrefab, transform, true);
         _map.transform.parent = transform;
         _player = Instantiate(
@@ -55,6 +60,16 @@ public class Level : MonoBehaviour
             Quaternion.identity);
         _camera.transform.parent = transform;
         _camera.GetComponent<FollowCamera>().Follow = _player;
+    }
+
+    public void HandleGameOver()
+    {
+        Timer.Stop();
+        LevelCanvas.GameOverSprite.SetActive(true);
+        LevelCanvas.RestartButton.SetActive(true);
+        if (_tileCount > _highScore)
+            LevelCanvas.AnnounceHighScore(
+                $"{SceneManager.GetActiveScene().name}_highScore", _tileCount);
     }
 
     public void StartTimer()
@@ -101,6 +116,8 @@ public class Level : MonoBehaviour
     private void IncrementTileCount()
     {
         _tileCount += 1;
+        if (_tileCount > _highScore)
+            LevelCanvas.HasNewHighScore = true;
         LevelCanvas.SetTileCount(_tileCount);
     }
 }
