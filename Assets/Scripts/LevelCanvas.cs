@@ -17,13 +17,15 @@ public class LevelCanvas : MonoBehaviour
         get => _hasNewHighScore;
         set
         {
-            if (value)
+            if (value && !_hasNewHighScore)
+            {
+                StartCoroutine(AnnounceHighScore());
+                FindObjectOfType<AudioManager>().Play("AnnounceHighScore");
                 _counter.GetComponent<Tracker>().Value.GetComponent<Text>().color = Color.cyan;
-
-            _hasNewHighScore = value;
+                _hasNewHighScore = value;
+            }
         }
     }
-    
     private bool _hasNewHighScore;
     
     public GameObject BoostBar;
@@ -139,10 +141,11 @@ public class LevelCanvas : MonoBehaviour
         yield return null;
     }
 
-    public void AnnounceHighScore(string key, int score)
+    public IEnumerator AnnounceHighScore()
     {
-        NewHighScoreText?.SetActive(true);
-        PlayerPrefs.SetInt(key, score);
+        NewHighScoreText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
+        NewHighScoreText.gameObject.SetActive(false);
     }
 
     public void Restart()

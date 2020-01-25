@@ -96,7 +96,7 @@ MonoBehaviour:
     Pitch: 1
   - Clip: {fileID: 8300000, guid: 9028c450769db6544ace911045e48d57, type: 3}
     Source: {fileID: 0}
-    Name: GameOver
+    Name: SadGameOver
     Volume: 0.1
     Pitch: 1
   - Clip: {fileID: 8300000, guid: a3578a2f4fc8d954c8621f237e87e9e2, type: 3}
@@ -117,6 +117,16 @@ MonoBehaviour:
   - Clip: {fileID: 8300000, guid: 213efcd6a5c43fb488d2866363e30b56, type: 3}
     Source: {fileID: 0}
     Name: Alarm
+    Volume: 0.1
+    Pitch: 1
+  - Clip: {fileID: 8300000, guid: d7cf0bf7cec59a7469ce0dad09bede1d, type: 3}
+    Source: {fileID: 0}
+    Name: HappyGameOver
+    Volume: 0.1
+    Pitch: 1
+  - Clip: {fileID: 8300000, guid: 1267eebfc620f364282cdd40c2617df1, type: 3}
+    Source: {fileID: 0}
+    Name: AnnounceHighScore
     Volume: 0.1
     Pitch: 1
   IsMuted: 0

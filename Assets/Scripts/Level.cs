@@ -69,8 +69,15 @@ public class Level : MonoBehaviour
         LevelCanvas.GameOverSprite.SetActive(true);
         LevelCanvas.RestartButton.SetActive(true);
         if (_tileCount > _highScore)
-            LevelCanvas.AnnounceHighScore(
-                $"{SceneManager.GetActiveScene().name}_highScore", _tileCount);
+        {
+            PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().name}_highScore", _tileCount);
+            LevelCanvas.NewHighScoreText.gameObject.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("HappyGameOver");
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("SadGameOver");
+        }
     }
 
     public void StartTimer()

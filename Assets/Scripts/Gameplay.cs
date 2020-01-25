@@ -37,6 +37,19 @@ public class Gameplay : MonoBehaviour
         StartCoroutine(Countdown());
     }
 
+    public void Update()
+    {
+        if (Level.GameOver && !Level.LevelCanvas.GameOverSprite.active)
+        {
+            Level.HandleGameOver();
+            Destroy(Level.Player);
+        }
+        else if (!Level.GameOver && CountdownFinished)
+        {
+            HandleController();
+        }
+    }
+    
     public IEnumerator Countdown()
     {
         var i = 3;
@@ -58,21 +71,7 @@ public class Gameplay : MonoBehaviour
         Destroy(Level.LevelCanvas.CountdownGameObject);
         yield return null;
     }
-
-    public void Update()
-    {
-        if (Level.GameOver && !Level.LevelCanvas.GameOverSprite.active)
-        {
-            FindObjectOfType<AudioManager>().Play("GameOver");
-            Level.HandleGameOver();
-            Destroy(Level.Player);
-        }
-        else if (!Level.GameOver && CountdownFinished)
-        {
-            HandleController();
-        }
-    }
-
+    
     public void HandleController()
     {
         if (_controller.MouseDown)
