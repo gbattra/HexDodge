@@ -93,7 +93,7 @@ public class Level : MonoBehaviour
         {
             var min = Math.Floor(TimeRemaining / 60);
             var sec = Math.Floor(TimeRemaining % 60);
-            LevelCanvas.SetTime($"{min}:{sec}");
+            LevelCanvas.SetTime($"{min}:{(sec < 10 ? "0" + sec : sec.ToString())}");
 
             if (min == 0 && sec <= 20 && sec > 10)
                 LevelCanvas.SetTimerColor(Color.yellow);
