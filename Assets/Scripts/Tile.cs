@@ -45,9 +45,9 @@ public class Tile : MonoBehaviour
         HexRim.GetComponent<MeshRenderer>().material = GetItemMaterial(itemTag);
         var clone = Instantiate(
             item,
-            transform.position,
-            Quaternion.identity);
-        clone.transform.SetParent(transform);
+            transform,
+            false);
+        clone.transform.rotation = Quaternion.identity;
         _item = clone;
     }
 
