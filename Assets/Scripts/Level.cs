@@ -12,19 +12,13 @@ public class Level : MonoBehaviour
     public bool IsTimed;
     public float TotalTime;
     private double TimeRemaining => TotalTime - Timer.Elapsed.TotalSeconds;
-    
+
     public GameObject MapPrefab;
-    public GameObject PlayerPrefab;
-    public GameObject CameraPrefab;
-
-    private GameObject Map => _map;
-    private GameObject _map;
-
-    public GameObject Player => _player;
-    private GameObject _player;
     
-    private GameObject Camera => _camera;
-    private GameObject _camera;
+    public GameObject Player;
+    public GameObject Camera;
+
+    private GameObject _map;
 
     [SerializeField]
     public LevelCanvas LevelCanvas;
@@ -41,7 +35,7 @@ public class Level : MonoBehaviour
 
     public bool GameOver =>
         IsTimed && TimeRemaining < 1 ||
-        _player != null && !_player.GetComponent<Player>().Alive;
+        Player != null && !Player.GetComponent<Player>().Alive;
 
     public void Awake()
     {
@@ -49,17 +43,12 @@ public class Level : MonoBehaviour
             $"{SceneManager.GetActiveScene().name}_highScore", 0);
         _map = Instantiate(MapPrefab, transform, true);
         _map.transform.parent = transform;
-        _player = Instantiate(
-            PlayerPrefab, 
-            _map.GetComponent<Map>().CurrentTile.transform.position,
-            PlayerPrefab.transform.rotation);
-        _player.transform.parent = transform;
-        
-        _camera = Instantiate(CameraPrefab,
-            transform.position,
-            Quaternion.identity);
-        _camera.transform.parent = transform;
-        _camera.GetComponent<FollowCamera>().Follow = _player;
+        Player.transform.position = _map.GetComponent<Map>().CurrentTile.transform.position;
+    }
+
+    public void Start()
+    {
+        Camera.transform.Rotate(Vector3.forward, -90);
     }
 
     public void HandleGameOver()
@@ -115,26 +104,26 @@ public class Level : MonoBehaviour
 
     public void MoveToTile()
     {
-        if (_player.GetComponent<Player>().IsMoving)
+        if (Player.GetComponent<Player>().IsMoving)
             return;
         
         var map = _map.GetComponent<Map>();
         var selectedTile = map.SelectedTile;
         map.SetLastDirectionMoved(selectedTile);
         map.MoveToTile();
-        _player.GetComponent<Player>().MoveTo(selectedTile);
+        Player.GetComponent<Player>().MoveTo(selectedTile);
         IncrementTileCount();
     }
 
     public void HandleTileImpact()
     {
-        if (_player.GetComponent<Player>().IsMoving)
+        if (Player.GetComponent<Player>().IsMoving)
             return;
         
-        var player = _player.GetComponent<Player>();
+        var player = Player.GetComponent<Player>();
         var selectedTile = _map.GetComponent<Map>().SelectedTile;
         if (!player.CanHandleTile(selectedTile))
-            StartCoroutine(_camera.GetComponent<FollowCamera>().Shake());
+            StartCoroutine(Camera.GetComponent<FollowCamera>().Shake());
         player.HandleItemImpact(selectedTile);
         LevelCanvas.HandleItemImpact(player);
     }

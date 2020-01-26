@@ -46,9 +46,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -125,8 +126,8 @@ MonoBehaviour:
   PostFX: {fileID: 4977697464861706777, guid: 51d5e9d3e9411104bae7dfe77fdf8763, type: 3}
   Background: {fileID: 287481567752213963, guid: 9f6ba60bceb5f4f45a7f5c799a37e7eb,
     type: 3}
-  Offset: {x: 3, y: 13, z: 0}
-  BackgroundOffset: {x: 0, y: -14, z: 0}
+  Offset: {x: 3, y: 25, z: 0}
+  BackgroundOffset: {x: 0, y: -30, z: 0}
   SmoothSpeed: 0.125
   ShakeMagnitude: 0.05
   ShakeDuration: 0.1
