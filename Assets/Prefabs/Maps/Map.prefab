@@ -56,5 +56,5 @@ MonoBehaviour:
   RocketPercent: 5
   MinePercent: 30
   ShieldPercent: 30
-  MapWidth: 11
-  MapHeight: 9
+  MapWidth: 12
+  MapHeight: 8
