@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 1505221264536029016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.48548165, y: 2.9128902, z: 0.48548165}
+  m_LocalScale: {x: 0.48548165, y: 2.6955304, z: 0.48548165}
   m_Children: []
   m_Father: {fileID: 4365638097353058112}
   m_RootOrder: 5
@@ -599,6 +599,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainMenu: {fileID: 0}
+  BurstHighScore: {fileID: 0}
+  SprintHighScore: {fileID: 0}
+  LongDistanceHighScore: {fileID: 0}
+  MarathonHighScore: {fileID: 0}
+  EndlessHighScore: {fileID: 0}
 --- !u!1 &3959843190968838404
 GameObject:
   m_ObjectHideFlags: 0
