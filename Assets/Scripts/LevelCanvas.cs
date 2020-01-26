@@ -56,29 +56,13 @@ public class LevelCanvas : MonoBehaviour
     public GameObject GameOverPrefab;
     public GameObject GameOverSprite => _gameOverSprite;
 
-    public float BoostBarOffsetX;
-    public float RocketBarOffsetX;
-    public float HealthBarOffsetY;
-
     private bool IsYellow;
     private bool IsRed;
 
-    private GameObject _boostBar;
-    private GameObject _rocketBar;
-    private GameObject _healthBar;
     private GameObject _gameOverSprite;
 
     public void Awake()
     {
-        _boostBar = Instantiate(BoostBar, transform, false);
-        _boostBar.transform.position += new Vector3(BoostBarOffsetX, 0, 0);
-        
-        _rocketBar = Instantiate(RocketBar, transform, false);
-        _rocketBar.transform.position += new Vector3(RocketBarOffsetX, 0, 0);
-         
-        _healthBar = Instantiate(HealthBar, transform, false);
-        _healthBar.transform.position += new Vector3(0, HealthBarOffsetY, 0);
-
         _gameOverSprite = Instantiate(GameOverPrefab, transform, false);
         _gameOverSprite.SetActive(false);
 
@@ -187,8 +171,8 @@ public class LevelCanvas : MonoBehaviour
 
     public void HandleItemImpact(Player player)
     {
-        _boostBar.GetComponent<StatusBar>().SetActive(player.BoostCount);
-        _rocketBar.GetComponent<StatusBar>().SetActive(player.RocketCount);
-        _healthBar.GetComponent<StatusBar>().SetActive(player.HealthCount);
+        BoostBar.GetComponent<StatusBar>().SetActive(player.BoostCount);
+        RocketBar.GetComponent<StatusBar>().SetActive(player.RocketCount);
+        HealthBar.GetComponent<StatusBar>().SetActive(player.HealthCount);
     }
 }

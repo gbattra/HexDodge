@@ -39,7 +39,6 @@ public class Tile : MonoBehaviour
             item,
             transform,
             false);
-        clone.transform.rotation = Quaternion.identity;
         _item = clone;
     }
 
