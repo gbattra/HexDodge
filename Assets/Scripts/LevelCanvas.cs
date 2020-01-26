@@ -101,7 +101,6 @@ public class LevelCanvas : MonoBehaviour
         if (!IsYellow && color == Color.yellow)
         {
             StartCoroutine(AnnounceTimeRemaining(20));
-            FindObjectOfType<AudioManager>().Play("Alarm");
             _timer.GetComponent<Tracker>().SetColor(color);
             IsYellow = true;
         }
@@ -117,6 +116,7 @@ public class LevelCanvas : MonoBehaviour
 
     public IEnumerator AnnounceTimeRemaining(int seconds)
     {
+        FindObjectOfType<AudioManager>().Play("Alarm");
         TimeRemainingText.text = $"{seconds} SECONDS REMAINING!";
         TimeRemainingText.gameObject.SetActive(true);
         yield return new WaitForSeconds(2);
@@ -134,7 +134,7 @@ public class LevelCanvas : MonoBehaviour
         var i = 10;
         do
         {
-            FindObjectOfType<AudioManager>().Play("Alarm");
+            FindObjectOfType<AudioManager>().Play("Beep");
             yield return new WaitForSeconds(1f);
             i -= 1;
         } while (i > 0);

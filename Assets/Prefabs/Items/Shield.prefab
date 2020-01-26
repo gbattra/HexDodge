@@ -48,6 +48,7 @@ MonoBehaviour:
     type: 3}
   DestroySoundName: ShieldBreak
   ShouldPlayDestroyEffect: 0
+  ShouldPlaySoundEffect: 0
 --- !u!1001 &4055267828304419476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 0660ede88dd3c0446a931e529f558dc9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a4641a36dbecc7e43abe3f766fdc0170, type: 2}
+      objectReference: {fileID: 2100000, guid: a6575098a32b4a94f93d2e1863b7dd2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0660ede88dd3c0446a931e529f558dc9, type: 3}
 --- !u!4 &4055267828304019476 stripped

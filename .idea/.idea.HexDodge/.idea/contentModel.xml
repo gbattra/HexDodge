@@ -7,44 +7,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AnchorCamera.cs" t="Include" />
-        <e p="Imports" t="Include">
-          <e p="InsaneSystems" t="Include">
-            <e p="HealthbarsKit" t="Include">
-              <e p="Example" t="Include">
-                <e p="Scripts" t="Include">
-                  <e p="DamagingObject.cs" t="Include" />
-                  <e p="MovingObject.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Scripts" t="Include">
-                <e p="Damageable.cs" t="Include" />
-                <e p="UI" t="Include">
-                  <e p="Healthbar.cs" t="Include" />
-                  <e p="HealthbarsController.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-          <e p="MACHIN3" t="Include">
-            <e p="Skybox" t="Include">
-              <e p="Blueprint-Schematic_01-10_Raven_readme.txt" t="Include" />
-            </e>
-          </e>
-          <e p="Universal Sound FX" t="Include">
-            <e p="#Game Genre References" t="Include">
-              <e p="8bit and Retro.txt" t="Include" />
-              <e p="Fighting.txt" t="Include" />
-              <e p="First Person Shooter (FPS).txt" t="Include" />
-              <e p="Physics.txt" t="Include" />
-              <e p="Platform.txt" t="Include" />
-              <e p="Puzzle.txt" t="Include" />
-              <e p="Real Time Stategy (RTS) Medieval.txt" t="Include" />
-              <e p="Real Time Stategy (RTS) Sci-Fi.txt" t="Include" />
-              <e p="Shoot em Up.txt" t="Include" />
-            </e>
-            <e p="version_history.txt" t="Include" />
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
           <e p="Controller.cs" t="Include" />

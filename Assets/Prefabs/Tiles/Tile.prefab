@@ -48,19 +48,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HexRim: {fileID: 4393706621269914761}
   HexBase: {fileID: 1411842013420711290}
-  CurrentMaterial: {fileID: 2100000, guid: acf30f904f3fbc342b510149d8bd38f2, type: 2}
-  PreviousMaterial: {fileID: 2100000, guid: 95a57855372619843ab1e0e61376b52a, type: 2}
-  AvailableMaterial: {fileID: 2100000, guid: 76469193fc630224fb162d26ce4a3ac5, type: 2}
+  CurrentMaterial: {fileID: 2100000, guid: 89d5f84e662ef29459de4c6e7ac43199, type: 2}
+  PreviousMaterial: {fileID: 2100000, guid: b7a74a2098fa2bb4d865856483a6bcab, type: 2}
+  AvailableMaterial: {fileID: 2100000, guid: 8dfd67dac3e849b459e1841efc7ec8c9, type: 2}
   SelectedMaterial: {fileID: 2100000, guid: edc73dc187310e2468404fe22de54a7b, type: 2}
-  InactiveMaterial: {fileID: 2100000, guid: dec96d05f0bb1c648903f4a090fe7956, type: 2}
-  UnreachableMaterial: {fileID: 2100000, guid: 95a57855372619843ab1e0e61376b52a, type: 2}
-  BoostMaterial: {fileID: 2100000, guid: bd8002fe73cc5a14486a2a18da14faf4, type: 2}
-  RocketMaterial: {fileID: 2100000, guid: 9e0dbc08d46ed194e9ff8a6787df3083, type: 2}
-  HealthMaterial: {fileID: 2100000, guid: 6ff7aa0f3e9240940b50c76ee06509db, type: 2}
-  ShieldMaterial: {fileID: 2100000, guid: a4641a36dbecc7e43abe3f766fdc0170, type: 2}
-  MineMaterial: {fileID: 2100000, guid: 4880018238f406e46950e627c94310cd, type: 2}
-  EmptyMaterial: {fileID: 2100000, guid: 43ff5810e8b07a04797a1577fd10985c, type: 2}
-  PathMaterial: {fileID: 2100000, guid: 6916c29483e04df4a927d99cc79f6bf8, type: 2}
+  InactiveMaterial: {fileID: 2100000, guid: 5ec6c5b9e6344ea4394e8f169e52d525, type: 2}
+  EmptyMaterial: {fileID: 2100000, guid: 5ec6c5b9e6344ea4394e8f169e52d525, type: 2}
   CoordinateX: 0
   CoordinateY: 0
   IsAvailable: 0

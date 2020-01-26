@@ -11,16 +11,8 @@ public class Tile : MonoBehaviour
     public Material CurrentMaterial;
     public Material PreviousMaterial;
     public Material AvailableMaterial;
-    public Material SelectedMaterial;
     public Material InactiveMaterial;
-    public Material UnreachableMaterial;
-    public Material BoostMaterial;
-    public Material RocketMaterial;
-    public Material HealthMaterial;
-    public Material ShieldMaterial;
-    public Material MineMaterial;
     public Material EmptyMaterial;
-    public Material PathMaterial;
     
     public Coordinate Coordinate;
     public int CoordinateX;
@@ -61,12 +53,6 @@ public class Tile : MonoBehaviour
         IsAvailable = isAvailable;
         HexRim.GetComponent<MeshRenderer>().material = isAvailable ? AvailableMaterial : InactiveMaterial;
     }
-
-    public void SetIsSelected(bool isSelected)
-    {
-        IsSelected = isSelected;
-        HexRim.GetComponent<MeshRenderer>().material = isSelected ? SelectedMaterial : IsAvailable ? AvailableMaterial : InactiveMaterial;
-    }
     
     public void SetIsCurrent(bool isCurrent)
     {
@@ -94,7 +80,6 @@ public class Tile : MonoBehaviour
     {
         SetIsPrevious(false);
         SetIsCurrent(false);
-        SetIsSelected(false);
         SetIsAvailable(false);
         HexRim.GetComponent<MeshRenderer>().material = EmptyMaterial;
     }
