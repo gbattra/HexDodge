@@ -238,6 +238,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2891371047528064762, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -115
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371047678620142, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371047678620142, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371047678620142, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371047678620142, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371048035919703, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371048035919703, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371048035919703, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891371048035919703, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5122862667609188920, guid: 610264fcf8670c840b0b3fae26886ce0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -297,6 +342,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gameplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029561957632431369, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029561957632431369, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029561957632431369, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029561957632431369, guid: 610264fcf8670c840b0b3fae26886ce0,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 610264fcf8670c840b0b3fae26886ce0, type: 3}
