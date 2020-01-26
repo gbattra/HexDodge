@@ -65,7 +65,6 @@ public class Gameplay : MonoBehaviour
             CountdownFinished = true;
         FindObjectOfType<AudioManager>().Play("Go");
         Level.LevelCanvas.Countdown.SetText("GO!");
-        yield return new WaitForSeconds(1);
             
         Level.StartTimer();
         Destroy(Level.LevelCanvas.CountdownGameObject);

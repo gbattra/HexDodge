@@ -49,8 +49,6 @@ public class LevelCanvas : MonoBehaviour
 
     public void Awake()
     {
-        TimeTracker.GetComponent<Tracker>().SetLabelAndValue("TIMER", "0:00");
-        TileTracker.GetComponent<Tracker>().SetLabelAndValue("TILES", "0");
         RestartButton.GetComponent<Button>().onClick.AddListener(Restart);
     }
 
@@ -138,8 +136,8 @@ public class LevelCanvas : MonoBehaviour
 
     public void SetTime(string value)
     {
-        TileTracker.GetComponent<Tracker>().SetLabelAndValue(
-            "TIMER",
+        TimeTracker.GetComponent<Tracker>().SetLabelAndValue(
+            "TIME",
             value);
     }
 

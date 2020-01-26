@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3d21dc6d-3603-4d32-8abf-8bba37033f35" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HexDodge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HexDodge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PostFX/PostFX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PostFX/PostFX.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Level.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelCanvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Tracker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Tracker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Endless.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Endless.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tracker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +94,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tracker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelCanvas.cs" />
       </list>
     </option>
   </component>
@@ -174,7 +172,7 @@
       <workItem from="1579398401438" duration="1714000" />
       <workItem from="1579450195825" duration="4245000" />
       <workItem from="1579735871822" duration="4355000" />
-      <workItem from="1580066027367" duration="3388000" />
+      <workItem from="1580066027367" duration="4668000" />
     </task>
     <servers />
   </component>
