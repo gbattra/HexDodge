@@ -21,7 +21,7 @@ public class LevelCanvas : MonoBehaviour
             {
                 StartCoroutine(AnnounceHighScore());
                 FindObjectOfType<AudioManager>().Play("AnnounceHighScore");
-                TileTracker.GetComponent<Tracker>().Value.GetComponent<Text>().color = Color.cyan;
+                TileTracker.GetComponent<Tracker>().Value.GetComponent<TextMeshProUGUI>().color = Color.cyan;
                 _hasNewHighScore = value;
             }
         }
