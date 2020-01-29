@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -262,27 +263,27 @@ PrefabInstance:
     - target: {fileID: 1697298895630457900, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3226737
+      value: 1.0863361
       objectReference: {fileID: 0}
     - target: {fileID: 1697298895630457900, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.935966
+      value: 5.638943
       objectReference: {fileID: 0}
     - target: {fileID: 1697298895630457900, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3226737
+      value: 1.0863361
       objectReference: {fileID: 0}
     - target: {fileID: 1697298895630457900, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -658
+      value: -582
       objectReference: {fileID: 0}
     - target: {fileID: 1697298895630457900, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1261
+      value: 1501
       objectReference: {fileID: 0}
     - target: {fileID: 2177349166706076817, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
         type: 3}
@@ -309,6 +310,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2542452670828115266, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4095d34b64e7f49bc97658b5a50ec967,
+        type: 3}
     - target: {fileID: 2859882418589458469, guid: 3eff9adb451b4ed49a9c0d7fc1daf230,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1027,7 +1034,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 62.6
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2236,12 +2243,12 @@ PrefabInstance:
     - target: {fileID: 5030359774715416087, guid: b545fa30b84cd6843a41615bcfe5b426,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -737
+      value: -677
       objectReference: {fileID: 0}
     - target: {fileID: 5030359774715416087, guid: b545fa30b84cd6843a41615bcfe5b426,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1491
+      value: 1783
       objectReference: {fileID: 0}
     - target: {fileID: 5030359774715416087, guid: b545fa30b84cd6843a41615bcfe5b426,
         type: 3}
@@ -2266,18 +2273,24 @@ PrefabInstance:
     - target: {fileID: 5030359774715416087, guid: b545fa30b84cd6843a41615bcfe5b426,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4765518
+      value: 1.1819597
       objectReference: {fileID: 0}
     - target: {fileID: 5030359774715416087, guid: b545fa30b84cd6843a41615bcfe5b426,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.859227
+      value: 6.0399647
       objectReference: {fileID: 0}
     - target: {fileID: 5030359774715416087, guid: b545fa30b84cd6843a41615bcfe5b426,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4765518
+      value: 1.1819597
       objectReference: {fileID: 0}
+    - target: {fileID: 6476359246634530934, guid: b545fa30b84cd6843a41615bcfe5b426,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 77ed29b1c889e47c6973b57faaeac3cb,
+        type: 3}
     - target: {fileID: 8973858998534317774, guid: b545fa30b84cd6843a41615bcfe5b426,
         type: 3}
       propertyPath: TutorialPage
