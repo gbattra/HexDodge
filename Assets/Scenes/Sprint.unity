@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -490,7 +491,7 @@ PrefabInstance:
     - target: {fileID: 6833084519770382210, guid: 610264fcf8670c840b0b3fae26886ce0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -113.30005
+      value: -289
       objectReference: {fileID: 0}
     - target: {fileID: 6833084520193558678, guid: 610264fcf8670c840b0b3fae26886ce0,
         type: 3}
