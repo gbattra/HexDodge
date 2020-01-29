@@ -51,10 +51,10 @@ MonoBehaviour:
   Shield: {fileID: 1940024016502255129, guid: 0cb4cdd850334dd42a4e1260a19c9f2c, type: 3}
   Empty: {fileID: 2524900671435868503, guid: 8ccc14d70e908bf40ace8f26c233a200, type: 3}
   Tiles: []
-  HealthPercent: 3
+  HealthPercent: 1
   BoostPercent: 5
   RocketPercent: 5
-  MinePercent: 30
-  ShieldPercent: 30
+  MinePercent: 25
+  ShieldPercent: 25
   MapWidth: 12
   MapHeight: 9
