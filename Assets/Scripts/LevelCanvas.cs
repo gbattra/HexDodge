@@ -47,8 +47,11 @@ public class LevelCanvas : MonoBehaviour
     private bool IsRed;
 
 
-    public void Awake()
+    public void Start()
     {
+        var IsMuted = PlayerPrefs.GetInt("IsMuted", 0).Equals(1);
+        if (IsMuted)
+            Mute();
         RestartButton.GetComponent<Button>().onClick.AddListener(Restart);
     }
 
@@ -117,6 +120,7 @@ public class LevelCanvas : MonoBehaviour
 
     public void Mute()
     {
+        PlayerPrefs.SetInt("IsMuted", 1);
         UnmuteButton.SetActive(true);
         MuteButton.SetActive(false);
         FindObjectOfType<AudioManager>().IsMuted = true;
@@ -124,6 +128,7 @@ public class LevelCanvas : MonoBehaviour
 
     public void Unmute()
     {
+        PlayerPrefs.SetInt("IsMuted", 0);
         MuteButton.SetActive(true);
         UnmuteButton.SetActive(false);
         FindObjectOfType<AudioManager>().IsMuted = false;
