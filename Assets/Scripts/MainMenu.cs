@@ -10,8 +10,9 @@ public class MainMenu : MonoBehaviour
     
     public void Play()
     {
-        gameObject.SetActive(false);
-        GameModeMenu.SetActive(true);
+        SceneManager.LoadScene("Endless");
+        // gameObject.SetActive(false);
+        // GameModeMenu.SetActive(true);
     }
 
     public void Tutorial()
