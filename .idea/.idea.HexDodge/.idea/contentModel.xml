@@ -7,11 +7,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AnchorCamera.cs" t="Include" />
-        <e p="Resources" t="Include">
-          <e p="Skybox" t="Include">
-            <e p="Blueprint-Schematic_01-10_Raven_readme.txt" t="Include" />
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
           <e p="Controller.cs" t="Include" />
@@ -25,6 +20,7 @@
           <e p="LevelCanvas.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="Map.cs" t="Include" />
+          <e p="Menu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Rotator.cs" t="Include" />
           <e p="Shifter.cs" t="Include" />
