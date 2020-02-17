@@ -1,39 +1,95 @@
 fileFormatVersion: 2
 guid: 8502ce6eb778c514685c4f5ce397fa72
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Cone
-    100002: Cone.001
-    100004: Cone.002
-    100006: Cone.003
-    100008: Cylinder
-    100010: //RootNode
-    400000: Cone
-    400002: Cone.001
-    400004: Cone.002
-    400006: Cone.003
-    400008: Cylinder
-    400010: //RootNode
-    2100000: No Name
-    2300000: Cone
-    2300002: Cone.001
-    2300004: Cone.002
-    2300006: Cone.003
-    2300008: Cylinder
-    3300000: Cone
-    3300002: Cone.001
-    3300004: Cone.002
-    3300006: Cone.003
-    3300008: Cylinder
-    4300000: Cone
-    4300002: Cone.002
-    4300004: Cone.003
-    4300006: Cone.001
-    4300008: Cylinder
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cone
+  - first:
+      1: 100002
+    second: Cone.001
+  - first:
+      1: 100004
+    second: Cone.002
+  - first:
+      1: 100006
+    second: Cone.003
+  - first:
+      1: 100008
+    second: Cylinder
+  - first:
+      1: 100010
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Cone
+  - first:
+      4: 400002
+    second: Cone.001
+  - first:
+      4: 400004
+    second: Cone.002
+  - first:
+      4: 400006
+    second: Cone.003
+  - first:
+      4: 400008
+    second: Cylinder
+  - first:
+      4: 400010
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      23: 2300000
+    second: Cone
+  - first:
+      23: 2300002
+    second: Cone.001
+  - first:
+      23: 2300004
+    second: Cone.002
+  - first:
+      23: 2300006
+    second: Cone.003
+  - first:
+      23: 2300008
+    second: Cylinder
+  - first:
+      33: 3300000
+    second: Cone
+  - first:
+      33: 3300002
+    second: Cone.001
+  - first:
+      33: 3300004
+    second: Cone.002
+  - first:
+      33: 3300006
+    second: Cone.003
+  - first:
+      33: 3300008
+    second: Cylinder
+  - first:
+      43: 4300000
+    second: Cone
+  - first:
+      43: 4300002
+    second: Cone.002
+  - first:
+      43: 4300004
+    second: Cone.003
+  - first:
+      43: 4300006
+    second: Cone.001
+  - first:
+      43: 4300008
+    second: Cylinder
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -63,9 +119,10 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -73,18 +130,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -93,10 +151,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -106,13 +164,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
